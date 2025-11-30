@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from app.core.config import settings
+from app.api.routes import api_router   
 
 app = FastAPI(
     description="Middleware to prevent OWASP LLM02 (Sensitive Data Disclosure) by scrubbing PII from text using Microsoft Presidio.",
