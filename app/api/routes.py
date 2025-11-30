@@ -2,7 +2,6 @@ from fastapi import APIRouter, HTTPException
 from app.schemas.payload import ScrubberRequest, ScrubberResponse
 from app.services.scrubber import scrubber_service
 
-
 router = APIRouter()
 
 @router.post("/scrub", response_model=ScrubberResponse, summary ="Scrub PII from text")

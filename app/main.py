@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from app.core.config import settings
-from app.api.routes import api_router   
+from app.api.routes import router   
 
 app = FastAPI(
     description="Middleware to prevent OWASP LLM02 (Sensitive Data Disclosure) by scrubbing PII from text using Microsoft Presidio.",
@@ -9,7 +9,7 @@ app = FastAPI(
     version="1.0.0"
 )
 
-app.include_router(api_router, prefix=settings.API_V1_STR)
+app.include_router(router, prefix=settings.API_V1_STR)
 
 @app.get("/health")
 async def health_check():

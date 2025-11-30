@@ -11,3 +11,4 @@ spacey
 pydantic
 pydantic-settings
 python-dotenv
+
