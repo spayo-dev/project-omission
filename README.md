@@ -30,7 +30,7 @@ This project  mitigates the following risks from the [OWASP Top 10 for LLM Appli
 
 ## Architecture
 
-![Project Omission Architecture](docs/images/Omission Diagram.png)
+![Project Omission Architecture](docs/images/Omission%20Diagram.png)
 
 1.  **Ingest:** API receives raw text payload via `POST /api/v1/scrub`.
 2.  **Analyze:** Presidio Analyzer identifies entities (SSN, CREDIT_CARD, EMAIL).
@@ -73,3 +73,7 @@ docker run -p 8000:8000 project-omission
 
 # Roadmap
 1. Canadian SIN Support: Implement a way to validate Canadian Social Insurance numbers using the Luhn Algorithm. 
+
+# References
+[Presidio](https://microsoft.github.io/presidio/)
+[Ploomer](https://ploomber.io/blog/pii-openai/)
