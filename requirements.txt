@@ -1,0 +1,13 @@
+# Web framework
+fastapi
+uvicorn[standard]
+
+# Presidio for PII detection and anonymization
+presidio-analyzer
+presidio-anonymizer
+spacey
+
+# Configuration and environment management
+pydantic
+pydantic-settings
+python-dotenv
