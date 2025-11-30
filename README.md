@@ -16,7 +16,7 @@ Project Omission acts as a proxy layer between the frontend client and the LLM. 
 ---
 
 ## OWASP 2025 Coverage
-This project  mitigates the following risks from the [OWASP Top 10 for LLM Applications 2025](https://genai.owasp.org/):
+This project  mitigates the following risks from the [OWASP Top 10 for LLM Applications 2025 (Latest)](https://genai.owasp.org/):
 
 | ID | Vulnerability | How Project Omission Mitigates |
 | :--- | :--- | :--- |
@@ -26,7 +26,7 @@ This project  mitigates the following risks from the [OWASP Top 10 for LLM Appli
 
 ## Architecture
 
-*(Insert your Excalidraw diagram here: Client -> [Project Omission Proxy] -> [External LLM API])*
+![Project Omission Architecture](docs/images/Omission Diagram.png)
 
 1.  **Ingest:** API receives raw text payload via `POST /api/v1/scrub`.
 2.  **Analyze:** Presidio Analyzer identifies entities (SSN, CREDIT_CARD, EMAIL).
