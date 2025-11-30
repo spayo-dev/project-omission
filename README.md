@@ -72,4 +72,4 @@ docker run -p 8000:8000 project-omission
 ```
 
 # Roadmap
-1. Canadian SIN Support: Implement a way to validate Canadian Social Insurance numbers.
+1. Canadian SIN Support: Implement a way to validate Canadian Social Insurance numbers using the Luhn Algorithm. 
