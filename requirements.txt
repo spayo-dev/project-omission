@@ -5,7 +5,7 @@ uvicorn[standard]
 # Presidio for PII detection and anonymization
 presidio-analyzer
 presidio-anonymizer
-spacey
+spacy
 
 # Configuration and environment management
 pydantic

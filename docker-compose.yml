@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    container_name: omission-dev
+    ports:
+      - "8000:8000"
+    # 1. Mount the current directory for live code updates
+    volumes:
+      - .:/app
+    # 2. Load environment variables
+    env_file:
+      - .env
+    # 3. OVERRIDE: Run uvicorn with --reload for hot-reloading
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload

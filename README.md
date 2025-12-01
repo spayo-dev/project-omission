@@ -64,11 +64,23 @@ curl -X 'POST' \
 Prerequisites: Docker Desktop.
 
 ```bash
-# 1. Build the image (includes baking in the NLP model)
+# Quick Start (Production Mode)
+To run the application as a standalone container (simulating a production deployment):
+
+```bash
+# 1. Build the image (bakes in the NLP model)
 docker build -t project-omission .
 
 # 2. Run the container
-docker run -p 8000:8000 project-omission
+# Note: Ensure .env file exists or pass variables manually (API KEY)
+docker run -p 8000:8000 --env-file .env project-omission
+
+# Development (Hot Reload)
+For active development with source code mounting and auto-reloading:
+
+# Starts the service with volume mounts defined in docker-compose.yml
+docker-compose up --build
+
 ```
 
 # Roadmap
