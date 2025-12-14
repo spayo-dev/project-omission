@@ -1,10 +1,11 @@
+# Smaller than alpine to reduce image size while maintaining compatibility
 FROM python:3.13-slim
 
-# Set environment variables
+# Ensure we don't generate .pyc files and enable stdout/stderr buffering
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
 
-# Install system dependencies
+# Install linux dependencies and installs GCC for building any C extensions
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     && rm -rf /var/lib/apt/lists/*

@@ -41,7 +41,7 @@ class PIIScrubber:
             text=text,
             analyzer_results=results,
             operators={
-                "default": OperatorConfig("replace", {"new_value": "<{entity_type}>"})
+                "default": OperatorConfig("replace", {"new_value": "[REDACTED-{entity_type}>]"})
             }
         )
 
